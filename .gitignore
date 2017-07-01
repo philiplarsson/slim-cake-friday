@@ -99,3 +99,4 @@ Temporary Items
 
 
 # End of https://www.gitignore.io/api/emacs,osx,composer,linux
+database.db
