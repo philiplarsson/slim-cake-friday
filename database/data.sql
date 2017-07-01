@@ -1,7 +1,8 @@
 DELETE FROM cookies;
 
 INSERT INTO cookies(date, name, image)
-VALUES ('July 7', 'Sandwich cookie', 'http://via.placeholder.com/350x350&text=Sandwhich+cookie'),
+VALUES ('June 30', 'Chocolate Ball', 'http://via.placeholder.com/350x350&text=Chocolate+ball'),
+      ('July 7', 'Sandwich cookie', 'http://via.placeholder.com/350x350&text=Sandwhich+cookie'),
       ('July 14', 'Cinnamon roll', 'http://via.placeholder.com/350x350&text=Cinnamon+roll'),
       ('July 21', 'Nut cookie', 'http://via.placeholder.com/350x350&text=Nut+cookie'),
       ('July 28', 'Carrot Cookie', 'http://via.placeholder.com/350x350&text=Carrot+cookie'),
