@@ -24,5 +24,13 @@ $container['view'] = function($container) {
     return $view;
 };
 
+// Database
+$container['db'] = function ($container) {
+    $pdo = new PDO("sqlite:" . __DIR__ . '/../database/database.db');
+    // Throw exception if there are any errors.
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $pdo;
+};
+
 // Load our routes file
 require __DIR__ . '/../routes/web.php';
