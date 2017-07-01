@@ -1,0 +1,4 @@
+* Weekly cake app
+
+Simple app using Slim.
+Using /twig/ and /PDO/.
