@@ -3,10 +3,23 @@
   <head>
     <meta charset="UTF-8"/>
     <title>{% block title %}{% endblock %}</title>
+    <link href="css/bulma.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    {% block content %}
+    <section class="hero is-primary is-fullheight is-bold">
+      <div class="hero-head">
+        <header class="nav">
+          {% include 'navigation.twig' %}
+        </header>
+      </div>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          {% block content %}
 
-    {% endblock%}
+          {% endblock%}
+        </div>
+      </div>
+    </section>
   </body>
 </html>

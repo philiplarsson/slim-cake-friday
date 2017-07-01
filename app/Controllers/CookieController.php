@@ -38,6 +38,7 @@ class CookieController
                 ])
             ], 400);
         }
+
         $cookie = $this->getCookieFor($week);
         if ($cookie) {
             $jsonData = [
