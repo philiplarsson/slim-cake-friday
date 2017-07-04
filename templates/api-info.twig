@@ -8,7 +8,7 @@
   <h2 class="title is-2">
     API Information
   </h2>
-  <p>This webapp has a simple REST API. See below for examples of different routes to use. All response is in <a href="http://jsonapi.org/" target="_blank">JSON</a>.</p>
+  <p>This webapp has a simple REST API. See below for two examples of different routes to use. All response is in <a href="http://jsonapi.org/" target="_blank">JSON</a>.</p>
 
   <br/>
   <br/>
@@ -19,5 +19,13 @@
       <a class="button is-outlined" href="{{ path_for('get-week', {'week': '30'}) }}">Example</a>
     </div>
   </div>
-
+  <br/>
+  <br/>
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <h3 class="title is-3">/api/v1/thisweek</h3>
+      <p>Fetches cookie for this week.</p>
+      <a class="button is-outlined" href="{{ path_for('get-this-week') }}">Example</a>
+    </div>
+  </div>
 {% endblock %}

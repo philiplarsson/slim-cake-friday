@@ -45,8 +45,23 @@ class CookieController
         }
 
         $cookie = $this->getCookieFor($week);
+        $jsonData = $this->getJSONDataFor($cookie);
+
+        return $response->withJson($jsonData);
+    }
+
+    public function getThisWeek(Request $request, Response $response)
+    {
+        $cookie = $this->getThisWeeksCookie();
+        $jsonData = $this->getJSONDataFor($cookie);
+
+        return $response->withJson($jsonData);
+    }
+
+    private function getJSONDataFor($cookie)
+    {
         if ($cookie) {
-            $jsonData = [
+            return [
                 'data' => [
                     'type' => 'cookies',
                     'id' => $cookie['id'],
@@ -58,12 +73,10 @@ class CookieController
                 ]
             ];
         } else {
-            $jsonData = [
+            return [
                 'data' => []
             ];
         }
-
-        return $response->withJson($jsonData);
     }
 
     private function correctInput($week)
