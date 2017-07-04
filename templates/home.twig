@@ -1,11 +1,17 @@
 {% extends 'layout.twig' %}
 
-{% block title %}Homepage{% endblock %}
+{% block title %}CookieApp | Fika for the win{% endblock %}
 {% block navigation %}
   {% include 'navigation.twig' with { 'active': 'home' } %}
 {% endblock %}
 {% block content %}
-  <h1>Welcome!</h1>
+  <h1 class="title is-1">Welcome!</h1>
 
-  <p>This is a small PHP site. </p>
+  {% if cookie %}
+    <img src="{{ cookie['image']}}"/>
+    <h2 class="subtitle"><strong>{{ cookie['name']}}</strong> (week {{ cookie['date'] | date('W')}})</h2>
+  {% else %}
+    <p>Sorry no cookie available. </p>
+  {% endif %}
+
 {% endblock %}

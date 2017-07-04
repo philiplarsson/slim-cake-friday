@@ -4,10 +4,5 @@
 {% block content %}
   <h3 class="title is-3">Weekly cookie</h3>
 
-  {% if cookie %}
-      <img src="{{ cookie['image']}}"/>
-    <p>{{ cookie['name']}} on {{ cookie['date'] }}.</p>
-  {% else %}
-    <p>Sorry no cookie available. </p>
-  {% endif %}
+
 {% endblock %}

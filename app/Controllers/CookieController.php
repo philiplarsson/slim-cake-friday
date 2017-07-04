@@ -16,13 +16,18 @@ class CookieController
         $this->c = $container;
     }
 
-    public function cookie(Request $request, Response $response)
+    public function index(Request $request, Response $response)
     {
         $cookie = $this->getThisWeeksCookie();
 
-        return $this->c->view->render($response, 'cookie.twig', [
+        return $this->c->view->render($response, 'home.twig', [
             'cookie' => $cookie
         ]);
+    }
+
+    public function apiInfo(Request $request, Response $response)
+    {
+        return $this->c->view->render($response, 'api-info.twig');
     }
 
     public function getWeekCookie(Request $request, Response $response, $args)
