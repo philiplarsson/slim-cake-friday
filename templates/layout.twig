@@ -10,7 +10,9 @@
     <section class="hero is-primary is-fullheight is-bold">
       <div class="hero-head">
         <header class="nav">
-          {% include 'navigation.twig' %}
+          {% block navigation %}
+
+          {% endblock %}
         </header>
       </div>
       <div class="hero-body">

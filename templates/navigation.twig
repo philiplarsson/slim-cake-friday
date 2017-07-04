@@ -10,14 +10,11 @@
     <span></span>
   </span>
   <div class="nav-right nav-menu">
-    <a class="nav-item is-active">
+    <a class="nav-item{% if active == 'home'%} is-active{% endif %}" href="{{ path_for('home') }}">
       Home
     </a>
-    <a class="nav-item">
-      Examples
-    </a>
-    <a class="nav-item">
-      Documentation
+    <a class="nav-item{% if active == 'api'%} is-active{% endif %}" href="{{ path_for('api-info') }}">
+      API
     </a>
   </div>
 </div>
